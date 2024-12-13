@@ -45,6 +45,10 @@ public:
                 ret.row[3] = { this->row[0].w, this->row[1].w, this->row[2].w, this->row[3].w };
                 return ret;
         }
+
+        static mat4 rotation(float _angle, vec3 _axis) { 
+                
+        }
 //      public operators
 
         vec4 operator[](u_int i) const { return row[i]; }

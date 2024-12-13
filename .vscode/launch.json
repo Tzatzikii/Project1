@@ -8,11 +8,11 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/gabork/Documents/Programming/Cpp/OpenGL/Project1",
-      "program": "/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/debug/client_dbg",
+      "cwd": ".",
+      "program": "/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/debug/client",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
       "preLaunchTask": "compile",
+      "miDebuggerPath": "gdb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

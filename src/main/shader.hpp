@@ -16,10 +16,10 @@ class Shader {
         GLuint vertex_shader, fragment_shader;
 
 //      private methods
-        std::string read_shader(const GLchar * _path) const {
+        std::string read_shader(const GLchar * _path, const GLchar * _stype) const {
                 std::ifstream is(_path, std::ifstream::in);
                 if(!is.is_open()) {
-                        std::cout << "Invalid shader path" << std::endl;
+                        std::cout << "Invalid " << _stype << " shader path" << std::endl;
                 }
                 std::stringstream ss;
                 ss << is.rdbuf() << "\0";
@@ -69,13 +69,13 @@ class Shader {
                 }
                 return GL_TRUE;
         }
-        GLuint create_shader(const GLchar * _path, GLenum _type, GLchar * _err) const {
+        GLuint create_shader(const GLchar * _path, GLenum _type, GLchar * _stype) const {
                 GLuint shader = glCreateShader(_type);
                 if(!shader) {
-                        std::cout << _err << std::endl;
+                        std::cout << "Failed to create " << _stype << " shader." << std::endl;
                         exit(1);
                 }
-                std::string shader_str = read_shader(_path);
+                std::string shader_str = read_shader(_path, _stype);
                 const GLchar * cstr = shader_str.c_str();
                 glShaderSource(shader, 1, &cstr, NULL);
                 glCompileShader(shader);
@@ -102,8 +102,8 @@ class Shader {
         }
 
         void create(const GLchar * _vpath, const GLchar * _fpath) {
-                vertex_shader  = create_shader(_vpath, GL_VERTEX_SHADER, "Vertex shader creation failed.");
-                fragment_shader = create_shader(_fpath, GL_FRAGMENT_SHADER, "Fragment shader creation failed.");
+                vertex_shader  = create_shader(_vpath, GL_VERTEX_SHADER, "Vertex");
+                fragment_shader = create_shader(_fpath, GL_FRAGMENT_SHADER, "Fragment");
                 program = create_program();
                 glDetachShader(program, vertex_shader);
                 glDetachShader(program, fragment_shader);
