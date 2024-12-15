@@ -143,7 +143,7 @@ public:
         void set_uniform(glm::mat4 _m, std::string _name){
                 GLint location = glGetUniformLocation(program, _name.c_str());
                 if(location < 0 ){ std::cout << "uniform " << _name << " cannot be set" << std::endl; return;}
-                glUniformMatrix4fv(location, 1, GL_TRUE, nullptr);
+                glUniformMatrix4fv(location, 1, GL_TRUE, &_m[0][0]);
         }
 };
 

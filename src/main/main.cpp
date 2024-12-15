@@ -27,7 +27,7 @@ void loop(GLFWwindow * window) {
         //Texture txtr("../../res/textures/wood.tga");
         mat4 v = cam.v();
         mat4 p = cam.p();
-        mat4 mvp = v * p;
+        mat4 mvp =  p * v;
         Mesh cube("../res/models/cube.obj");
         shader.use();
         shader.set_uniform(mvp, "mvp");

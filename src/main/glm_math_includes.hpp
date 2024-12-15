@@ -3,6 +3,7 @@
 #include <glm/vec3.hpp>
 #include <glm/vec4.hpp>
 #include <glm/ext/matrix_transform.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 using mat4 = glm::mat4;
 using vec2 = glm::vec2;
