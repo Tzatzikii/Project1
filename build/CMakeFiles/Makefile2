@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main
+CMAKE_SOURCE_DIR = /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build
+CMAKE_BINARY_DIR = /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -126,14 +126,14 @@ _deps/glm-build/glm/clean:
 CMakeFiles/Project1.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Project1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Project1"
 .PHONY : CMakeFiles/Project1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Project1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Project1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles 0
 .PHONY : CMakeFiles/Project1.dir/rule
 
 # Convenience name for target.

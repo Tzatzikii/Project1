@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.11)
 
 project(Project1 VERSION 0.1)
+include(FetchContent)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -16,9 +17,8 @@ target_include_directories(Project1 BEFORE PUBLIC ${PROJECT_SOURCE_DIR}/../MathF
 
 target_include_directories(Project1 PUBLIC "${PROJECT_BINARY_DIR}")
 
-find_package(glm CONFIG REQUIRED)
+#ind_package(glm CONFIG REQUIRED)
 
-include(FetchContent)
 
 FetchContent_Declare(
         glm
