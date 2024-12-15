@@ -47,20 +47,41 @@ public:
         }
 
         static mat4 rotation(float _angle, vec3 _axis) { 
+                float c = std::cos(_angle), s = std::cos(_angle);
+                _axis.normalize();
+                // dont ask xd  
+                return mat4(c * (1 - _axis.x*_axis.x) + _axis.x*_axis.x, _axis.x*_axis.y*(1 - c) + _axis.z*s, _axis.x*_axis.z*(1 - c) - _axis.y*s, 0.0f,
+                                _axis.x*_axis.y*(1 - c) - _axis.z*s, c*(1 - _axis.y*_axis.y) + _axis.y*_axis.y, _axis.y*_axis.z*(1 - c) + _axis.x*s, 0.0f,
+                                _axis.x*_axis.z*(1 - c) + _axis.y*s, _axis.y*_axis.z*(1 - c) - _axis.x*s, c*(1 - _axis.z*_axis.z) + _axis.z*_axis.z, 0.0f,
+                                0.0f, 0.0f, 0.0f, 1.0f);
                 
+        }
+        
+        static mat4 translate(vec3 _mod) { 
+                return mat4(1.0f, 0.0f, 0.0f, 0.0f,
+                                0.0f, 1.0f, 0.0f, 0.0f,
+                                0.0f, 0.0f, 1.0f, 0.0f,
+                                _mod.x, _mod.y, _mod.z, 1.0f);
+        }
+        static mat4 scale(vec3 _mod) {
+                return mat4(_mod.x, 0.0f, 0.0f, 0.0f, 
+                                0.0f, _mod.y, 0.0f, 0.0f,
+                                0.0f, 0.0f, _mod.z, 0.0f,
+                                0.0f, 0.0f, 0.0f, 1.0f);
         }
 //      public operators
 
+        vec4& operator[](u_int i) { return row[i]; }
         vec4 operator[](u_int i) const { return row[i]; }
+        operator float*() const { return (float*)this; }
 
 };
 
 inline vec4 operator*(const vec4& _vl, const mat4& _mr){
-        mat4 ret = _mr.transpose();
-        return { dot(_vl, _mr[0]), dot(_vl, _mr[1]), dot(_vl, _mr[2]), dot(_vl, _mr[3]) };
+        return _vl.x * _mr[0] + _vl.y * _mr[1] + _vl.z * _mr[2] + _vl.w * _mr[3];
 }
 inline mat4 operator*(const mat4& _ml, const mat4& _mr){
-        mat4 ret = _mr.transpose();
+        mat4 ret;
         for(int i = 0; i < 4; i++) ret[i] = _ml[i] * _mr;
         return ret; 
 }

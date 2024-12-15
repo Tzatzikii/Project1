@@ -7,7 +7,8 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include <vector>                                                                                                            
+#include <vector>      
+#include "../math/mathdef.hpp"                                                                                                      
 
 class Shader {          
 
@@ -122,6 +123,27 @@ public:
         }
         void use() {
                 glUseProgram(program);
+        }
+
+        void set_uniform(const vec2& _v, std::string _name){
+                GLint location = glGetUniformLocation(program, _name.c_str());
+                if(location < 0 ){ std::cout << "uniform " << _name << " cannot be set" << std::endl; return;}
+                glUniform2f(location, _v.x, _v.y);
+        }
+        void set_uniform(const vec3& _v, std::string _name){
+                GLint location = glGetUniformLocation(program, _name.c_str());
+                if(location < 0 ){ std::cout << "uniform " << _name << " cannot be set" << std::endl; return;}
+                glUniform3f(location, _v.x, _v.y, _v.z);
+        }
+        void set_uniform(const vec4& _v, std::string _name){
+                GLint location = glGetUniformLocation(program, _name.c_str());
+                if(location < 0 ){ std::cout << "uniform " << _name << " cannot be set" << std::endl; return;}
+                glUniform4f(location, _v.x, _v.y, _v.z, _v.w);
+        }
+        void set_uniform(mat4 _m, std::string _name){
+                GLint location = glGetUniformLocation(program, _name.c_str());
+                if(location < 0 ){ std::cout << "uniform " << _name << " cannot be set" << std::endl; return;}
+                glUniformMatrix4fv(location, 1, GL_TRUE, (float*)&_m[0].x);
         }
 };
 

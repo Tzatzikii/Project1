@@ -16,6 +16,8 @@ SOURCES=$(find "$SOURCE_DIR" -type f -name "*.cpp")
 
 OBJECTS=()
 
+rm bin/*.o
+
 for SRC in $SOURCES; do
     BASE_NAME=$(basename "$SRC" .cpp)
 

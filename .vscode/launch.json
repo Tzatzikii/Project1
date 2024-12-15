@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": false,
       "cwd": ".",
-      "program": "/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/debug/client",
+      "program": "${workspaceRoot}/build/debug/client",
       "MIMode": "gdb",
       "preLaunchTask": "compile",
       "miDebuggerPath": "gdb",

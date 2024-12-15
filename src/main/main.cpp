@@ -3,34 +3,41 @@
 #include <stdio.h>
 #include "shader.hpp"
 #include "../math/mathdef.hpp"
-#include "geometry.hpp"
 #include "camera.hpp"
+#include "mesh.hpp"
+#include "texture.hpp"
 
-const float g_fov = M_PI_2f;
+const float g_fov = 90.0f;
+const float g_fp = 0.1f; 
+const float g_bp = 100.0f; // render dist
 const u_int g_window_w = 600;
 const u_int g_window_h = 600;
 
+
 void init() {
         glewInit();
+        glViewport(0, 0, g_window_w, g_window_h);
+        glEnable(GL_DEPTH_TEST);
+	glDisable(GL_CULL_FACE);
 }
 
 void loop(GLFWwindow * window) {
+        Camera cam({0, 0, 4}, {0, 1, -4});
         Shader shader("../../res/shaders/basic");
+        Texture txtr("../../res/textures/wood.tga");
+        mat4 v = cam.v();
+        mat4 p = cam.p();
+        mat4 mvp = v * p;
+        Mesh cube("../../res/models/cube.obj");
         shader.use();
-        Geometry geo;
-        Camera cam();
-        geo.push({{0, 1, 1, 1}, {0, 1, 1, 1}, {0, 0}});
-        geo.push({{1, 0, 1, 1}, {0, 1, 1, 1}, {0, 0}});
-        geo.push({{-1, 0, 1, 1}, {0, 1, 1, 1}, {0, 0}});
-
-        geo.draw();
+        shader.set_uniform(mvp, "mvp");
         
         while(!glfwWindowShouldClose(window)){
                 glClearColor(0.4f, 0.4f, 0.4f, 1.0f);
-                glClear(GL_COLOR_BUFFER_BIT);
-                glDrawArrays(GL_TRIANGLES, 0, 3);
-                glfwSwapBuffers(window);
+                glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+                cube.draw();
 
+                glfwSwapBuffers(window);
                 glfwPollEvents();
         }
 }

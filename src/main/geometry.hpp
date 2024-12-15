@@ -13,24 +13,12 @@ struct VertexData {
 
 class Geometry {
 
-//      attribs
-
+protected:
         unsigned int vao, vbo;
-        std::vector<VertexData> vertices;
 
 public:
-
-
-//      methods
         Geometry();
-/*
-        binds the vao and vbo and draws GL_TRIANGLES
-*/
-        void draw();
-
-        void push(const VertexData& _vd){
-                vertices.push_back(_vd);
-        }
+        virtual void draw() const = 0;
 };
 
 #endif
