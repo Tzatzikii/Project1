@@ -5,7 +5,7 @@ include(FetchContent)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-set(CMAKE_BUILD_TYPE Debug)
+#set(CMAKE_BUILD_TYPE Debug)
 
 add_executable(Project1 main.cpp camera.cpp geometry.cpp mesh.cpp object.cpp scene.cpp)
 

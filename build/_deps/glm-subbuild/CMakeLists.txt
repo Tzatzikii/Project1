@@ -28,8 +28,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(glm-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/g-truc/glm.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "bf71a834948186f4097caa076cd2663c69a10e1e"
-                    SOURCE_DIR          "/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/_deps/glm-src"
-                    BINARY_DIR          "/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/_deps/glm-build"
+                    SOURCE_DIR          "/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/_deps/glm-src"
+                    BINARY_DIR          "/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/_deps/glm-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/camera.cpp" "CMakeFiles/Project1.dir/camera.cpp.o" "gcc" "CMakeFiles/Project1.dir/camera.cpp.o.d"
-  "/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/geometry.cpp" "CMakeFiles/Project1.dir/geometry.cpp.o" "gcc" "CMakeFiles/Project1.dir/geometry.cpp.o.d"
-  "/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/main.cpp" "CMakeFiles/Project1.dir/main.cpp.o" "gcc" "CMakeFiles/Project1.dir/main.cpp.o.d"
-  "/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/mesh.cpp" "CMakeFiles/Project1.dir/mesh.cpp.o" "gcc" "CMakeFiles/Project1.dir/mesh.cpp.o.d"
-  "/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/object.cpp" "CMakeFiles/Project1.dir/object.cpp.o" "gcc" "CMakeFiles/Project1.dir/object.cpp.o.d"
-  "/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/scene.cpp" "CMakeFiles/Project1.dir/scene.cpp.o" "gcc" "CMakeFiles/Project1.dir/scene.cpp.o.d"
+  "/home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/camera.cpp" "CMakeFiles/Project1.dir/camera.cpp.o" "gcc" "CMakeFiles/Project1.dir/camera.cpp.o.d"
+  "/home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/geometry.cpp" "CMakeFiles/Project1.dir/geometry.cpp.o" "gcc" "CMakeFiles/Project1.dir/geometry.cpp.o.d"
+  "/home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/main.cpp" "CMakeFiles/Project1.dir/main.cpp.o" "gcc" "CMakeFiles/Project1.dir/main.cpp.o.d"
+  "/home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/mesh.cpp" "CMakeFiles/Project1.dir/mesh.cpp.o" "gcc" "CMakeFiles/Project1.dir/mesh.cpp.o.d"
+  "/home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/object.cpp" "CMakeFiles/Project1.dir/object.cpp.o" "gcc" "CMakeFiles/Project1.dir/object.cpp.o.d"
+  "/home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/scene.cpp" "CMakeFiles/Project1.dir/scene.cpp.o" "gcc" "CMakeFiles/Project1.dir/scene.cpp.o.d"
   "" "Project1" "gcc" "CMakeFiles/Project1.dir/link.d"
   )
 
