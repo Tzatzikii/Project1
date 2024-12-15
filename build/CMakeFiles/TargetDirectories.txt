@@ -1,7 +1,0 @@
-/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles/Project1.dir
-/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles/edit_cache.dir
-/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles/rebuild_cache.dir
-/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/_deps/glm-build/CMakeFiles/edit_cache.dir
-/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/_deps/glm-build/CMakeFiles/rebuild_cache.dir
-/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/_deps/glm-build/glm/CMakeFiles/edit_cache.dir
-/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/_deps/glm-build/glm/CMakeFiles/rebuild_cache.dir
