@@ -1,7 +1,7 @@
 #ifndef MAIN_CAMERA_HPP_
 #define MAIN_CAMERA_HPP_
 
-#include "../math/mathdef.hpp"
+#include "glm_math_includes.hpp"
 
 extern const float g_fov;
 extern const float g_fp;
@@ -9,15 +9,17 @@ extern const float g_bp;
 extern const u_int g_window_w;
 extern const u_int g_window_h;
 
+inline float to_rad(float _deg) { return _deg * M_PI / 180.0f; }
+
 class Camera {
-        vec4 pos, dir;
-        vec3 vup;
+        glm::vec4 pos, dir;
+        glm::vec3 vup;
         float fov, asp, fp,  bp;
 public:
-        Camera(vec3, vec3);
+        Camera(glm::vec3, glm::vec3);
         void set();
-        mat4 v();
-        mat4 p();
+        glm::mat4 v();
+        glm::mat4 p();
 };
 
 #endif

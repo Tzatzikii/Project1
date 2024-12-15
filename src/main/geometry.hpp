@@ -4,11 +4,11 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <vector>
-#include "../math/mathdef.hpp"
+#include "glm_math_includes.hpp"
 
 struct VertexData {
-        vec4 position, normal;
-        vec2 texcoord;
+        glm::vec4 position, normal;
+        glm::vec2 texcoord;
 };
 
 class Geometry {

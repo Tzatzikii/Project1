@@ -1,13 +1,14 @@
 #ifndef MAIN_OBJECT_HPP_
 #define MAIN_OBJECT_HPP_
 
+#include "glm_math_includes.hpp"
 #include "mesh.hpp"
 
 class Object {
         Mesh * mesh;
         float rotation_angle;
-        vec3 rotation_axis;
-        vec3 translation;
+        glm::vec3 rotation_axis;
+        glm::vec3 translation;
 
 };
 

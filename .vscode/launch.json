@@ -1,5 +1,8 @@
 {
   "version": "0.2.0",
+  "cmake.debugConfig": {
+    "type" : "gdb"
+  },
   "configurations": [
     {
       "name": "C/C++ Runner: Debug Session",
@@ -9,7 +12,7 @@
       "stopAtEntry": false,
       "externalConsole": false,
       "cwd": ".",
-      "program": "${workspaceRoot}/build/debug/client",
+      "program": "${workspaceRoot}/build/Project1",
       "MIMode": "gdb",
       "preLaunchTask": "compile",
       "miDebuggerPath": "gdb",

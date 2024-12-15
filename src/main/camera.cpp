@@ -15,9 +15,9 @@ mat4 Camera::v() {
         vec3 u = normalize(cross(vup, w));
         vec3 v = cross(w, u);
         mat4 rodrigT({u, 0}, {v, 0}, {w, 0}, {0.0f, 0.0f, 0.0f, 1.0f});
-        mat4 a = mat4::translate(-vec3(pos.x, pos.y, pos.z));
-        mat4 b = rodrigT.transpose();
-        return mat4::translate(-vec3(pos.x, pos.y, pos.z)) * rodrigT.transpose();
+        glm::mat4 m(1.0f);
+        mat4 b = glm::transpose(rodrigT);
+        return glm::translate(mat4(1.0), -vec3( pos )) * glm::transpose(rodrigT);
         
 }
 

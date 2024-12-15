@@ -5,6 +5,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include "glm_math_includes.hpp"
 #include "geometry.hpp"
 
 enum data_type{ POSITION, NORMAL, TEXCOORD, FACE, UNDEFINED };

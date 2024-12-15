@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 #include <stdio.h>
 #include "shader.hpp"
-#include "../math/mathdef.hpp"
+#include "glm_math_includes.hpp"
 #include "camera.hpp"
 #include "mesh.hpp"
 #include "texture.hpp"
@@ -23,12 +23,12 @@ void init() {
 
 void loop(GLFWwindow * window) {
         Camera cam({0, 0, 4}, {0, 1, -4});
-        Shader shader("../../res/shaders/basic");
-        Texture txtr("../../res/textures/wood.tga");
+        Shader shader("../res/shaders/basic");
+        //Texture txtr("../../res/textures/wood.tga");
         mat4 v = cam.v();
         mat4 p = cam.p();
         mat4 mvp = v * p;
-        Mesh cube("../../res/models/cube.obj");
+        Mesh cube("../res/models/cube.obj");
         shader.use();
         shader.set_uniform(mvp, "mvp");
         
