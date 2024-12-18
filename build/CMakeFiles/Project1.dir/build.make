@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main
+CMAKE_SOURCE_DIR = /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build
+CMAKE_BINARY_DIR = /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Project1.dir/depend.make
@@ -73,88 +73,116 @@ CMakeFiles/Project1.dir/codegen:
 .PHONY : CMakeFiles/Project1.dir/codegen
 
 CMakeFiles/Project1.dir/main.cpp.o: CMakeFiles/Project1.dir/flags.make
-CMakeFiles/Project1.dir/main.cpp.o: /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/main.cpp
+CMakeFiles/Project1.dir/main.cpp.o: /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/main.cpp
 CMakeFiles/Project1.dir/main.cpp.o: CMakeFiles/Project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project1.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/main.cpp.o -MF CMakeFiles/Project1.dir/main.cpp.o.d -o CMakeFiles/Project1.dir/main.cpp.o -c /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project1.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/main.cpp.o -MF CMakeFiles/Project1.dir/main.cpp.o.d -o CMakeFiles/Project1.dir/main.cpp.o -c /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/main.cpp
 
 CMakeFiles/Project1.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Project1.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/main.cpp > CMakeFiles/Project1.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/main.cpp > CMakeFiles/Project1.dir/main.cpp.i
 
 CMakeFiles/Project1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/main.cpp -o CMakeFiles/Project1.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/main.cpp -o CMakeFiles/Project1.dir/main.cpp.s
 
 CMakeFiles/Project1.dir/camera.cpp.o: CMakeFiles/Project1.dir/flags.make
-CMakeFiles/Project1.dir/camera.cpp.o: /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/camera.cpp
+CMakeFiles/Project1.dir/camera.cpp.o: /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/camera.cpp
 CMakeFiles/Project1.dir/camera.cpp.o: CMakeFiles/Project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project1.dir/camera.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/camera.cpp.o -MF CMakeFiles/Project1.dir/camera.cpp.o.d -o CMakeFiles/Project1.dir/camera.cpp.o -c /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project1.dir/camera.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/camera.cpp.o -MF CMakeFiles/Project1.dir/camera.cpp.o.d -o CMakeFiles/Project1.dir/camera.cpp.o -c /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/camera.cpp
 
 CMakeFiles/Project1.dir/camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Project1.dir/camera.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/camera.cpp > CMakeFiles/Project1.dir/camera.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/camera.cpp > CMakeFiles/Project1.dir/camera.cpp.i
 
 CMakeFiles/Project1.dir/camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/camera.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/camera.cpp -o CMakeFiles/Project1.dir/camera.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/camera.cpp -o CMakeFiles/Project1.dir/camera.cpp.s
 
 CMakeFiles/Project1.dir/geometry.cpp.o: CMakeFiles/Project1.dir/flags.make
-CMakeFiles/Project1.dir/geometry.cpp.o: /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/geometry.cpp
+CMakeFiles/Project1.dir/geometry.cpp.o: /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/geometry.cpp
 CMakeFiles/Project1.dir/geometry.cpp.o: CMakeFiles/Project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project1.dir/geometry.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/geometry.cpp.o -MF CMakeFiles/Project1.dir/geometry.cpp.o.d -o CMakeFiles/Project1.dir/geometry.cpp.o -c /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/geometry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project1.dir/geometry.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/geometry.cpp.o -MF CMakeFiles/Project1.dir/geometry.cpp.o.d -o CMakeFiles/Project1.dir/geometry.cpp.o -c /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/geometry.cpp
 
 CMakeFiles/Project1.dir/geometry.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Project1.dir/geometry.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/geometry.cpp > CMakeFiles/Project1.dir/geometry.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/geometry.cpp > CMakeFiles/Project1.dir/geometry.cpp.i
 
 CMakeFiles/Project1.dir/geometry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/geometry.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/geometry.cpp -o CMakeFiles/Project1.dir/geometry.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/geometry.cpp -o CMakeFiles/Project1.dir/geometry.cpp.s
 
 CMakeFiles/Project1.dir/mesh.cpp.o: CMakeFiles/Project1.dir/flags.make
-CMakeFiles/Project1.dir/mesh.cpp.o: /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/mesh.cpp
+CMakeFiles/Project1.dir/mesh.cpp.o: /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/mesh.cpp
 CMakeFiles/Project1.dir/mesh.cpp.o: CMakeFiles/Project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project1.dir/mesh.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/mesh.cpp.o -MF CMakeFiles/Project1.dir/mesh.cpp.o.d -o CMakeFiles/Project1.dir/mesh.cpp.o -c /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project1.dir/mesh.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/mesh.cpp.o -MF CMakeFiles/Project1.dir/mesh.cpp.o.d -o CMakeFiles/Project1.dir/mesh.cpp.o -c /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/mesh.cpp
 
 CMakeFiles/Project1.dir/mesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Project1.dir/mesh.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/mesh.cpp > CMakeFiles/Project1.dir/mesh.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/mesh.cpp > CMakeFiles/Project1.dir/mesh.cpp.i
 
 CMakeFiles/Project1.dir/mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/mesh.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/mesh.cpp -o CMakeFiles/Project1.dir/mesh.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/mesh.cpp -o CMakeFiles/Project1.dir/mesh.cpp.s
 
 CMakeFiles/Project1.dir/object.cpp.o: CMakeFiles/Project1.dir/flags.make
-CMakeFiles/Project1.dir/object.cpp.o: /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/object.cpp
+CMakeFiles/Project1.dir/object.cpp.o: /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/object.cpp
 CMakeFiles/Project1.dir/object.cpp.o: CMakeFiles/Project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Project1.dir/object.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/object.cpp.o -MF CMakeFiles/Project1.dir/object.cpp.o.d -o CMakeFiles/Project1.dir/object.cpp.o -c /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Project1.dir/object.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/object.cpp.o -MF CMakeFiles/Project1.dir/object.cpp.o.d -o CMakeFiles/Project1.dir/object.cpp.o -c /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/object.cpp
 
 CMakeFiles/Project1.dir/object.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Project1.dir/object.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/object.cpp > CMakeFiles/Project1.dir/object.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/object.cpp > CMakeFiles/Project1.dir/object.cpp.i
 
 CMakeFiles/Project1.dir/object.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/object.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/object.cpp -o CMakeFiles/Project1.dir/object.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/object.cpp -o CMakeFiles/Project1.dir/object.cpp.s
 
 CMakeFiles/Project1.dir/scene.cpp.o: CMakeFiles/Project1.dir/flags.make
-CMakeFiles/Project1.dir/scene.cpp.o: /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/scene.cpp
+CMakeFiles/Project1.dir/scene.cpp.o: /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/scene.cpp
 CMakeFiles/Project1.dir/scene.cpp.o: CMakeFiles/Project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project1.dir/scene.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/scene.cpp.o -MF CMakeFiles/Project1.dir/scene.cpp.o.d -o CMakeFiles/Project1.dir/scene.cpp.o -c /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project1.dir/scene.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/scene.cpp.o -MF CMakeFiles/Project1.dir/scene.cpp.o.d -o CMakeFiles/Project1.dir/scene.cpp.o -c /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/scene.cpp
 
 CMakeFiles/Project1.dir/scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Project1.dir/scene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/scene.cpp > CMakeFiles/Project1.dir/scene.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/scene.cpp > CMakeFiles/Project1.dir/scene.cpp.i
 
 CMakeFiles/Project1.dir/scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/scene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/scene.cpp -o CMakeFiles/Project1.dir/scene.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/scene.cpp -o CMakeFiles/Project1.dir/scene.cpp.s
+
+CMakeFiles/Project1.dir/texture.cpp.o: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/texture.cpp.o: /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/texture.cpp
+CMakeFiles/Project1.dir/texture.cpp.o: CMakeFiles/Project1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Project1.dir/texture.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/texture.cpp.o -MF CMakeFiles/Project1.dir/texture.cpp.o.d -o CMakeFiles/Project1.dir/texture.cpp.o -c /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/texture.cpp
+
+CMakeFiles/Project1.dir/texture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Project1.dir/texture.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/texture.cpp > CMakeFiles/Project1.dir/texture.cpp.i
+
+CMakeFiles/Project1.dir/texture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/texture.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/texture.cpp -o CMakeFiles/Project1.dir/texture.cpp.s
+
+CMakeFiles/Project1.dir/shader.cpp.o: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/shader.cpp.o: /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/shader.cpp
+CMakeFiles/Project1.dir/shader.cpp.o: CMakeFiles/Project1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Project1.dir/shader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project1.dir/shader.cpp.o -MF CMakeFiles/Project1.dir/shader.cpp.o.d -o CMakeFiles/Project1.dir/shader.cpp.o -c /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/shader.cpp
+
+CMakeFiles/Project1.dir/shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Project1.dir/shader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/shader.cpp > CMakeFiles/Project1.dir/shader.cpp.i
+
+CMakeFiles/Project1.dir/shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/shader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/shader.cpp -o CMakeFiles/Project1.dir/shader.cpp.s
 
 # Object files for target Project1
 Project1_OBJECTS = \
@@ -163,7 +191,9 @@ Project1_OBJECTS = \
 "CMakeFiles/Project1.dir/geometry.cpp.o" \
 "CMakeFiles/Project1.dir/mesh.cpp.o" \
 "CMakeFiles/Project1.dir/object.cpp.o" \
-"CMakeFiles/Project1.dir/scene.cpp.o"
+"CMakeFiles/Project1.dir/scene.cpp.o" \
+"CMakeFiles/Project1.dir/texture.cpp.o" \
+"CMakeFiles/Project1.dir/shader.cpp.o"
 
 # External object files for target Project1
 Project1_EXTERNAL_OBJECTS =
@@ -174,10 +204,12 @@ Project1: CMakeFiles/Project1.dir/geometry.cpp.o
 Project1: CMakeFiles/Project1.dir/mesh.cpp.o
 Project1: CMakeFiles/Project1.dir/object.cpp.o
 Project1: CMakeFiles/Project1.dir/scene.cpp.o
+Project1: CMakeFiles/Project1.dir/texture.cpp.o
+Project1: CMakeFiles/Project1.dir/shader.cpp.o
 Project1: CMakeFiles/Project1.dir/build.make
 Project1: CMakeFiles/Project1.dir/compiler_depend.ts
 Project1: CMakeFiles/Project1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Project1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Project1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -189,6 +221,6 @@ CMakeFiles/Project1.dir/clean:
 .PHONY : CMakeFiles/Project1.dir/clean
 
 CMakeFiles/Project1.dir/depend:
-	cd /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles/Project1.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles/Project1.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/Project1.dir/depend
 

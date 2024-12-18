@@ -19,24 +19,59 @@ void init() {
         glViewport(0, 0, g_window_w, g_window_h);
         glEnable(GL_DEPTH_TEST);
 	glDisable(GL_CULL_FACE);
+        glLineWidth(10);
+
+}
+
+Camera cam({0, 0, 4}, {0, 0, -1});
+
+bool key_pressed[128] = {false};
+
+void on_keyboard(GLFWwindow * window, int key, int scancode, int action, int mods) {
+        if(action == GLFW_PRESS) key_pressed[key] = true;
+        else if(action == GLFW_RELEASE) key_pressed[key] = false;
 }
 
 void loop(GLFWwindow * window) {
-        Camera cam({0, 0, 4}, {0, 1, -4});
+
+        
         Shader shader("../res/shaders/basic");
-        //Texture txtr("../../res/textures/wood.tga");
-        mat4 v = cam.v();
-        mat4 p = cam.p();
-        mat4 mvp = v * p;
+        Texture txtr("../res/textures/wood.tga");
         Mesh cube("../res/models/cube.obj");
         shader.use();
-        shader.set_uniform(mvp, "mvp");
+        shader.set_uniform(txtr, "sampler");
+        glfwSetKeyCallback(window, on_keyboard);
         
+        VertexData line[2] = {{{0,-1,0,1}, {0,0,0,0}, {0,0}}, {{0,-1,0,1}, {0,0,0,0}, {0,0}}};
+
         while(!glfwWindowShouldClose(window)){
                 glClearColor(0.4f, 0.4f, 0.4f, 1.0f);
                 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-                cube.draw();
+                if(key_pressed[GLFW_KEY_L]) {
+                        cam.rotate_horizontal(-0.1f);
+                }
+                if(key_pressed[GLFW_KEY_J]) {
+                        cam.rotate_horizontal(0.1f);
+                }
+                if(key_pressed[GLFW_KEY_W]) {
+                        cam.move_parallel(0.1f);
+                }
+                if(key_pressed[GLFW_KEY_S]) {
+                        cam.move_parallel(-0.1f);
+                }
+                if(key_pressed[GLFW_KEY_A]) {
+                        cam.move_perpendicular(-0.1f);
+                }
+                if(key_pressed[GLFW_KEY_D]) {
+                        cam.move_perpendicular(0.1f);
+                }
+                line[1].position = cam.dir * 10.0f;
+                mat4 v = cam.v();
+                mat4 p = cam.p();
+                mat4 mvp =  p * v;
 
+                cube.draw();
+                glDrawArrays(GL_LINES, 0, 2);
                 glfwSwapBuffers(window);
                 glfwPollEvents();
         }

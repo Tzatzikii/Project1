@@ -5,15 +5,16 @@ include(FetchContent)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-set(CMAKE_BUILD_TYPE Debug)
+#set(CMAKE_BUILD_TYPE Debug)
 
-add_executable(Project1 main.cpp camera.cpp geometry.cpp mesh.cpp object.cpp scene.cpp)
+add_executable(Project1 main.cpp camera.cpp geometry.cpp mesh.cpp object.cpp scene.cpp texture.cpp shader.cpp)
 
 target_link_libraries(Project1 PUBLIC GLEW)
 target_link_libraries(Project1 PUBLIC GL)
 target_link_libraries(Project1 PUBLIC glfw)
+#target_link_libraries(Project1 PUBLIC ../lib/stb_image.h)
 
-target_include_directories(Project1 BEFORE PUBLIC ${PROJECT_SOURCE_DIR}/../MathFunctions)
+#target_include_directories(Project1 BEFORE PUBLIC ${PROJECT_SOURCE_DIR}/src/lib)
 
 target_include_directories(Project1 PUBLIC "${PROJECT_BINARY_DIR}")
 

@@ -12,7 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.31.2/CMakeSystem.cmake"
   "_deps/glm-src/CMakeLists.txt"
   "_deps/glm-src/glm/CMakeLists.txt"
-  "/home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/CMakeLists.txt"
+  "/home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/CMakeLists.txt"
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"

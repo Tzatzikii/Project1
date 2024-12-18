@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main
+CMAKE_SOURCE_DIR = /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build
+CMAKE_BINARY_DIR = /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -273,6 +273,54 @@ scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/scene.cpp.s
 .PHONY : scene.cpp.s
 
+shader.o: shader.cpp.o
+.PHONY : shader.o
+
+# target to build an object file
+shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/shader.cpp.o
+.PHONY : shader.cpp.o
+
+shader.i: shader.cpp.i
+.PHONY : shader.i
+
+# target to preprocess a source file
+shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/shader.cpp.i
+.PHONY : shader.cpp.i
+
+shader.s: shader.cpp.s
+.PHONY : shader.s
+
+# target to generate assembly for a file
+shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/shader.cpp.s
+.PHONY : shader.cpp.s
+
+texture.o: texture.cpp.o
+.PHONY : texture.o
+
+# target to build an object file
+texture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/texture.cpp.o
+.PHONY : texture.cpp.o
+
+texture.i: texture.cpp.i
+.PHONY : texture.i
+
+# target to preprocess a source file
+texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/texture.cpp.i
+.PHONY : texture.cpp.i
+
+texture.s: texture.cpp.s
+.PHONY : texture.s
+
+# target to generate assembly for a file
+texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/texture.cpp.s
+.PHONY : texture.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -300,6 +348,12 @@ help:
 	@echo "... scene.o"
 	@echo "... scene.i"
 	@echo "... scene.s"
+	@echo "... shader.o"
+	@echo "... shader.i"
+	@echo "... shader.s"
+	@echo "... texture.o"
+	@echo "... texture.i"
+	@echo "... texture.s"
 .PHONY : help
 
 
