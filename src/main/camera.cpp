@@ -12,10 +12,10 @@ void Camera::set() {
 
 mat4 Camera::v() {
         vec3 w = normalize(-vec3( dir.x, dir.y, dir.z ));
-        vec3 u = normalize(cross(vup, w));
-        vec3 v = cross(w, u);
+        vec3 u = normalize(cross(w, vup));
+        vec3 v = cross(u, w);
         mat4 rodrig({u, 0}, {v, 0}, {w, 0}, {0.0f, 0.0f, 0.0f, 1.0f});
-        return glm::translate(mat4(1.0), -vec3( pos )) * rodrig;
+        return glm::translate(rodrig, vec3(-pos));
         
 }
 
