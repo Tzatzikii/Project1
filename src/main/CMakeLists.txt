@@ -17,9 +17,6 @@ target_include_directories(Project1 BEFORE PUBLIC ${PROJECT_SOURCE_DIR}/../MathF
 
 target_include_directories(Project1 PUBLIC "${PROJECT_BINARY_DIR}")
 
-#ind_package(glm CONFIG REQUIRED)
-
-
 FetchContent_Declare(
         glm
 	GIT_REPOSITORY	https://github.com/g-truc/glm.git

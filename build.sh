@@ -32,3 +32,15 @@ if [ ${#OBJECTS[@]} -gt 0 ]; then
 else
     echo "No source files found to compile."
 fi
+
+init=$1
+
+if [ ${#init} == "init" ]
+    cd build
+    cmake -DCMAKE_BUILD_TYPE=Debug ../src/main/
+    cmake --build .
+    cd ..
+    echo "Initial build complete
+else
+
+fi
