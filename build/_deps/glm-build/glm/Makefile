@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main
+CMAKE_SOURCE_DIR = /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build
+CMAKE_BINARY_DIR = /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/_deps/glm-build/glm//CMakeFiles/progress.marks
-	cd /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glm-build/glm/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build/CMakeFiles 0
+	cd /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/_deps/glm-build/glm//CMakeFiles/progress.marks
+	cd /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glm-build/glm/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glm-build/glm/clean
+	cd /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glm-build/glm/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,17 +103,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glm-build/glm/preinstall
+	cd /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glm-build/glm/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glm-build/glm/preinstall
+	cd /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glm-build/glm/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -135,6 +135,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kullancs/Documents/Programming/C++/OpenGL/Project1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

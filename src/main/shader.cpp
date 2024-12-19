@@ -103,11 +103,11 @@ Shader::Shader(const GLchar * _folder) {
         create(vpath.c_str(), fpath.c_str());
         
 }
-void Shader::use() {
+void Shader::use() const {
         glUseProgram(program);
 }
 
-bool Shader::check_location(GLint _location, std::string _name) {
+bool Shader::check_location(GLint _location, std::string _name) const {
         if(_location < 0) {
                 std::cout << "Error while setting uniform variable \"" << _name << "\"" << std::endl;
                 return false;
@@ -115,35 +115,42 @@ bool Shader::check_location(GLint _location, std::string _name) {
         return true;
 }
 
-void Shader::set_uniform(const glm::vec2& _v, std::string _name) {
+void Shader::set_uniform(const glm::vec2& _v, std::string _name) const {
         GLint location = glGetUniformLocation(program, _name.c_str());
         if(!check_location(location, _name)) return;
         glUniform2f(location, _v.x, _v.y);
 }
-void Shader::set_uniform(const glm::vec3& _v, std::string _name) {
+void Shader::set_uniform(const glm::vec3& _v, std::string _name) const {
         GLint location = glGetUniformLocation(program, _name.c_str());
         if(!check_location(location, _name)) return;
         glUniform3f(location, _v.x, _v.y, _v.z);
 }
-void Shader::set_uniform(const glm::vec4& _v, std::string _name) {
+void Shader::set_uniform(const glm::vec4& _v, std::string _name) const {
         GLint location = glGetUniformLocation(program, _name.c_str());
         if(!check_location(location, _name)) return;
         glUniform4f(location, _v.x, _v.y, _v.z, _v.w);
 }
-void Shader::set_uniform(glm::mat4 _m, std::string _name){
+void Shader::set_uniform(glm::mat4 _m, std::string _name) const {
         GLint location = glGetUniformLocation(program, _name.c_str());
         if(!check_location(location, _name)) return;
         glUniformMatrix4fv(location, 1, GL_FALSE, &_m[0][0]);
 }
-void Shader::set_uniform(bool _b, std::string _name) {
+void Shader::set_uniform(bool _b, std::string _name) const {
         GLint location = glGetUniformLocation(program, _name.c_str());
         if(!check_location(location, _name)) return;
         glUniform1i(location, (int)_b);
 }
-void Shader::set_uniform(Texture& _texture, std::string _sampler_name) {
+void Shader::set_uniform(const Texture& _texture, std::string _sampler_name) const {
         GLint location = glGetUniformLocation(program, _sampler_name.c_str());
         if(!check_location(location, _sampler_name)) return;
         glBindTexture(GL_TEXTURE_2D, _texture.gpu_id);
         glUniform1i(location, _texture.cpu_id);
         glActiveTexture(GL_TEXTURE0 + _texture.cpu_id);
+}
+
+void Shader::bind(RenderState _state) const {
+        mat4 mvp = _state.p * _state.v * _state.m;
+        set_uniform(mvp, "mvp");
+        //set_uniform(_state.m, "m");
+        set_uniform(*_state.texture, "sampler");
 }

@@ -9,7 +9,8 @@
 #include <fstream>
 #include <vector>      
 #include "glm_math_includes.hpp"    
-#include "texture.hpp"                                                                                                  
+#include "texture.hpp"    
+#include "render_state.hpp"                                                                                              
 
 class Shader {          
 
@@ -23,22 +24,24 @@ class Shader {
         GLboolean check_linked(GLuint _program) const;
         GLuint create_shader(const GLchar * _path, GLenum _type, GLchar * _stype) const;
         GLuint create_program() const;
+        bool check_location(GLint _location, std::string _name) const;
 
         void create(const GLchar * _vpath, const GLchar * _fpath);
 
 
 public:
         Shader(const GLchar * _folder);
-        void use();
+        void use() const;
 
-        bool check_location(GLint _location, std::string _name);
 
-        void set_uniform(const glm::vec2& _v, std::string _name);
-        void set_uniform(const glm::vec3& _v, std::string _name);
-        void set_uniform(const glm::vec4& _v, std::string _name);
-        void set_uniform(glm::mat4 _m, std::string _name);
-        void set_uniform(Texture& _texture, std::string _sampler_name);  
-        void set_uniform(bool _b, std::string _name);
+        void set_uniform(const glm::vec2& _v, std::string _name) const;
+        void set_uniform(const glm::vec3& _v, std::string _name) const;
+        void set_uniform(const glm::vec4& _v, std::string _name) const;
+        void set_uniform(glm::mat4 _m, std::string _name) const;
+        void set_uniform(bool _b, std::string _name) const;
+        void set_uniform(const Texture& _texture, std::string _sampler_name) const;  
+
+        void bind(RenderState _state) const;
 };
 
 #endif

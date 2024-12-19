@@ -1,7 +1,7 @@
 CMakeFiles/Project1.dir/texture.cpp.o: \
- /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/texture.cpp \
+ /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/texture.cpp \
  /usr/include/stdc-predef.h \
- /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/texture.hpp \
+ /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/texture.hpp \
  /usr/include/GL/glew.h /usr/include/c++/14.2.1/cstddef \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -139,7 +139,7 @@ CMakeFiles/Project1.dir/texture.cpp.o: \
  /usr/include/c++/14.2.1/bits/stl_bvector.h \
  /usr/include/c++/14.2.1/bits/vector.tcc /usr/include/string.h \
  /usr/include/strings.h \
- /home/kullancs/Documents/Programming/C++/OpenGL/Project1/src/main/../lib/stb_image.h \
+ /home/gabork/Documents/Programming/Cpp/OpenGL/Project1/src/main/../lib/stb_image.h \
  /usr/include/c++/14.2.1/stdlib.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \

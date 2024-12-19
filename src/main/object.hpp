@@ -3,20 +3,23 @@
 
 #include "glm_math_includes.hpp"
 #include "mesh.hpp"
+#include "render_state.hpp"
 #include "shader.hpp"
 
 class Object {
-        const Mesh * mesh;
-        const Texture * texture;
-        const Shader * shader;
+        Mesh * mesh;
+        Texture * texture;
+        Shader * shader;
         float rotation_angle;
-        glm::vec3 rotation_axis;
-        glm::vec3 translation;
+        vec3 rotation_axis;
+        vec3 translation;
+        vec3 scaling;
 
 public:
-
-        Object::Object(const Mesh& _mesh, const Texture& _texture, const Shader& _shader);
-
+        Object(Mesh * _mesh, Texture * _texture, Shader * _shader);
+        mat4 m() const;
+        void draw(RenderState _state);
+        ~Object();
 };
 
 #endif

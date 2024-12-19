@@ -3,76 +3,50 @@
 #include <stdio.h>
 #include "shader.hpp"
 #include "glm_math_includes.hpp"
-#include "camera.hpp"
-#include "mesh.hpp"
-#include "texture.hpp"
+#include "scene.hpp"
 
 const float g_fov = 90.0f;
 const float g_fp = 0.1f; 
 const float g_bp = 100.0f; // render dist
+const float g_camera_speed = 5.0f;
 const u_int g_window_w = 600;
 const u_int g_window_h = 600;
 
-
-void init() {
+Scene scene;
+void key_callback_wrapper(GLFWwindow * window, int key, int scancode, int action, int mods) {
+        scene.handle_key_callback(window, key, scancode, action, mods);
+        
+}
+void init(GLFWwindow * _window) {
         glewInit();
         glViewport(0, 0, g_window_w, g_window_h);
         glEnable(GL_DEPTH_TEST);
 	glDisable(GL_CULL_FACE);
+        //glfwSwapInterval(0);
         glLineWidth(10);
-
+        glfwSetKeyCallback(_window, key_callback_wrapper);
+        scene.build();
 }
 
-Camera cam({0, 0, 4}, {0, 0, -1});
 
-bool key_pressed[128] = {false};
 
-void on_keyboard(GLFWwindow * window, int key, int scancode, int action, int mods) {
-        if(action == GLFW_PRESS) key_pressed[key] = true;
-        else if(action == GLFW_RELEASE) key_pressed[key] = false;
-}
 
-void loop(GLFWwindow * window) {
+void loop(GLFWwindow * _window) {
+    
 
-        
-        Shader shader("../res/shaders/basic");
-        Texture txtr("../res/textures/wood.tga");
-        Mesh cube("../res/models/cube.obj");
-        shader.use();
-        shader.set_uniform(txtr, "sampler");
-        glfwSetKeyCallback(window, on_keyboard);
-        
-        VertexData line[2] = {{{0,-1,0,1}, {0,0,0,0}, {0,0}}, {{0,-1,0,1}, {0,0,0,0}, {0,0}}};
-
-        while(!glfwWindowShouldClose(window)){
+        while(!glfwWindowShouldClose(_window)){
                 glClearColor(0.4f, 0.4f, 0.4f, 1.0f);
                 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-                if(key_pressed[GLFW_KEY_L]) {
-                        cam.rotate_horizontal(-0.1f);
+                static float t_end = 0.0f;
+                const float dt = 1.0f;
+                float t_start = t_end;
+                t_end = glfwGetTime();
+                for(float t = t_start; t < t_end; t+=dt){
+                        float delta = std::min(dt, t_end - t);
+                        scene.update(delta);
                 }
-                if(key_pressed[GLFW_KEY_J]) {
-                        cam.rotate_horizontal(0.1f);
-                }
-                if(key_pressed[GLFW_KEY_W]) {
-                        cam.move_parallel(0.1f);
-                }
-                if(key_pressed[GLFW_KEY_S]) {
-                        cam.move_parallel(-0.1f);
-                }
-                if(key_pressed[GLFW_KEY_A]) {
-                        cam.move_perpendicular(-0.1f);
-                }
-                if(key_pressed[GLFW_KEY_D]) {
-                        cam.move_perpendicular(0.1f);
-                }
-                line[1].position = cam.dir * 10.0f;
-                mat4 v = cam.v();
-                mat4 p = cam.p();
-                mat4 mvp =  p * v;
-
-                cube.draw();
-                glDrawArrays(GL_LINES, 0, 2);
-                glfwSwapBuffers(window);
+                scene.render();
+                glfwSwapBuffers(_window);
                 glfwPollEvents();
         }
 }
@@ -96,7 +70,7 @@ int main() {
 
         std::cout << glfwGetVersionString() << std::endl; 
         glfwMakeContextCurrent(window);
-        init();
+        init(window);
         loop(window);
 
         
