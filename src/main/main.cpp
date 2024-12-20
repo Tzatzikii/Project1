@@ -13,18 +13,26 @@ const u_int g_window_w = 600;
 const u_int g_window_h = 600;
 
 Scene scene;
-void key_callback_wrapper(GLFWwindow * window, int key, int scancode, int action, int mods) {
-        scene.handle_key_callback(window, key, scancode, action, mods);
+void key_callback_wrapper(GLFWwindow * _window, int _key, int _scancode, int _action, int _mods) {
+        scene.handle_key_callback(_window, _key, _scancode, _action, _mods);
         
 }
+
+void cursor_pos_callback_wrapper(GLFWwindow * _window, double _xpos, double _ypos) {
+        scene.handle_cursor_pos_callback(_window, _xpos, _ypos);
+        std::cout << _xpos << ":" << _ypos << std::endl;
+}
+
 void init(GLFWwindow * _window) {
         glewInit();
         glViewport(0, 0, g_window_w, g_window_h);
         glEnable(GL_DEPTH_TEST);
 	glDisable(GL_CULL_FACE);
-        //glfwSwapInterval(0);
+        glfwSwapInterval(0);
         glLineWidth(10);
         glfwSetKeyCallback(_window, key_callback_wrapper);
+        glfwSetCursorPosCallback(_window, cursor_pos_callback_wrapper);
+        glfwSetCursorPos(_window, g_window_w/2.0, g_window_h/2.0);
         scene.build();
 }
 
