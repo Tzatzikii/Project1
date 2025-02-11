@@ -2,9 +2,9 @@
 
 void Scene::build() {
         camera = new Camera(vec3(0, 1, 4), vec3(0, 0, -1));
-        Mesh * cube_mesh = new Mesh("../res/models/cube.obj");
-        Shader * default_shader = new Shader("../res/shaders/basic");
-        Texture * wood_texture = new Texture("../res/textures/wood.tga");
+        Mesh * cube_mesh = new Mesh("res/models/cube.obj");
+        Shader * default_shader = new Shader("res/shaders/basic");
+        Texture * wood_texture = new Texture("res/textures/wood.tga");
         Object * cube = new Object(cube_mesh, wood_texture, default_shader);
         objects.push_back(cube);
 }
@@ -32,19 +32,10 @@ void Scene::handle_key_callback(GLFWwindow * _window, int _key, int _scancode, i
 }
 
 void Scene::handle_cursor_pos_callback(GLFWwindow * _window, double _xpos, double _ypos) {
-        static float xprev = g_window_w/2.0f;
-        static float yprev = g_window_h/2.0f;
-        float dx = xprev - _xpos;
-        float dy = yprev - _ypos;
-        camera->rotate_vertical(-dy * shared_delta); 
-        camera->rotate_horizontal(-dx * shared_delta);
-        xprev = _xpos;
-        yprev = _ypos;
-        if( glm::length(vec2(_xpos, _ypos) - vec2(g_window_w/2.0f, g_window_h/2.0f)) > 1 ) {
-                xprev = g_window_w/2.0f;
-                yprev = g_window_h/2.0f;
-                glfwSetCursorPos(_window, g_window_w/2.0f, g_window_h/2.0f);
-        }
+        std::cout << _xpos << " : " << _ypos << std::endl;
+        camera->rotate_horizontal(_xpos * 0.01f);
+        camera->rotate_vertical(_ypos * 0.01f);
+        glfwSetCursorPos(_window, 0, 0);
 }
 
 void Scene::rotate_camera(float _delta) {

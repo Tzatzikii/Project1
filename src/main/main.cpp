@@ -4,6 +4,7 @@
 #include "shader.hpp"
 #include "glm_math_includes.hpp"
 #include "scene.hpp"
+#include <GL/gl.h>
 
 const float g_fov = 90.0f;
 const float g_fp = 0.1f; 
@@ -20,7 +21,6 @@ void key_callback_wrapper(GLFWwindow * _window, int _key, int _scancode, int _ac
 
 void cursor_pos_callback_wrapper(GLFWwindow * _window, double _xpos, double _ypos) {
         scene.handle_cursor_pos_callback(_window, _xpos, _ypos);
-        std::cout << _xpos << ":" << _ypos << std::endl;
 }
 
 void init(GLFWwindow * _window) {
@@ -32,7 +32,8 @@ void init(GLFWwindow * _window) {
         glLineWidth(10);
         glfwSetKeyCallback(_window, key_callback_wrapper);
         glfwSetCursorPosCallback(_window, cursor_pos_callback_wrapper);
-        glfwSetCursorPos(_window, g_window_w/2.0, g_window_h/2.0);
+        glfwSetInputMode(_window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+        if (glfwRawMouseMotionSupported()) glfwSetInputMode(_window, GLFW_RAW_MOUSE_MOTION, GLFW_TRUE);
         scene.build();
 }
 
