@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 #set(CMAKE_BUILD_TYPE Debug)
 
-add_executable(Project1 camera.cpp geometry.cpp main.cpp mesh.cpp object.cpp scene.cpp shader.cpp texture.cpp)
+add_executable(Project1 camera.cpp geometry.cpp main.cpp mesh.cpp object.cpp scene.cpp shader.cpp texture.cpp material.cpp model.cpp)
 
 target_link_libraries(Project1 PUBLIC GLEW)
 target_link_libraries(Project1 PUBLIC GL)

@@ -11,7 +11,7 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": ".",
+      "cwd": "${workspaceRoot}",
       "program": "${workspaceRoot}/build/Project1",
       "MIMode": "gdb",
       "preLaunchTask": "compile",

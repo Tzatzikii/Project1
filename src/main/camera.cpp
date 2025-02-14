@@ -25,13 +25,14 @@ mat4 Camera::p() {
 
 void Camera::rotate_horizontal(float _angle) {
         dir = dir * glm::rotate(mat4(1.0f), _angle, vup);
+        dir = normalize(dir);
 }
 
 void Camera::rotate_vertical(float _angle) {
         vec3 axis = glm::cross(vec3(dir), vec3(vup));
         vec4 newdir = dir * glm::rotate(mat4(1.0f), _angle, glm::normalize(axis));
         if(std::abs(glm::dot(vec3(newdir), vup)) > 0.9) return;
-        dir = newdir;
+        dir = normalize(newdir);
 }
 
 void Camera::move_parallel(float _units) {

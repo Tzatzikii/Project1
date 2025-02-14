@@ -3,7 +3,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "../lib/stb_image.h"
 
-u_int Texture::cpu_id_counter = 0;
+u_int Texture::cpu_id_counter = 1; // gpu starts counting from 1 as well
 
 u_char * Texture::read_texture(std::string _path) {
         x = 0, y = 0;

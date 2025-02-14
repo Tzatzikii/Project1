@@ -29,7 +29,7 @@ Mesh::Mesh(std::string _path) : Geometry() {
 void Mesh::read_wavefront(std::string _path){
         std::ifstream file(_path);
         if(!file.is_open()) {
-                std::cout << "Bad filepath: " << _path << std::endl;
+                std::cout << "Unable to read model mesh @ " << _path << std::endl;
                 exit(1);
         }
         std::stringstream data;

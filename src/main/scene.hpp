@@ -10,6 +10,7 @@ extern const float g_camera_speed;
 class Scene {
         Camera * camera;
         std::vector<Object*> objects;
+        std::vector<Light> lights;
         float shared_delta;
 public:
         void build();

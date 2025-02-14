@@ -10,7 +10,8 @@
 #include <vector>      
 #include "glm_math_includes.hpp"    
 #include "texture.hpp"    
-#include "render_state.hpp"                                                                                              
+#include "render_state.hpp"   
+#include "light.hpp"                                                                                           
 
 class Shader {          
 
@@ -33,13 +34,16 @@ public:
         Shader(const GLchar * _folder);
         void use() const;
 
-
+        void set_uniform(int _i, std::string _name) const;
+        void set_uniform(float _f, std::string _name) const;
         void set_uniform(const glm::vec2& _v, std::string _name) const;
         void set_uniform(const glm::vec3& _v, std::string _name) const;
         void set_uniform(const glm::vec4& _v, std::string _name) const;
         void set_uniform(glm::mat4 _m, std::string _name) const;
         void set_uniform(bool _b, std::string _name) const;
-        void set_uniform(const Texture& _texture, std::string _sampler_name) const;  
+        void set_uniform(const Texture& _texture, std::string _sampler_name) const;
+        void set_uniform(const std::vector<Light>& _arr, std::string _name) const;
+        void set_uniform(const Material& _material, std::string _name) const;
 
         void bind(RenderState _state) const;
 };

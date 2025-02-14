@@ -114,7 +114,16 @@ bool Shader::check_location(GLint _location, std::string _name) const {
         }
         return true;
 }
-
+void Shader::set_uniform(int _i, std::string _name) const{
+        GLint location = glGetUniformLocation(program, _name.c_str());
+        if(!check_location(location, _name)) return;
+        glUniform1i(location, _i);
+}
+void Shader::set_uniform(float _f, std::string _name) const{
+        GLint location = glGetUniformLocation(program, _name.c_str());
+        if(!check_location(location, _name)) return;
+        glUniform1f(location, _f);
+}
 void Shader::set_uniform(const glm::vec2& _v, std::string _name) const {
         GLint location = glGetUniformLocation(program, _name.c_str());
         if(!check_location(location, _name)) return;
@@ -143,14 +152,37 @@ void Shader::set_uniform(bool _b, std::string _name) const {
 void Shader::set_uniform(const Texture& _texture, std::string _sampler_name) const {
         GLint location = glGetUniformLocation(program, _sampler_name.c_str());
         if(!check_location(location, _sampler_name)) return;
+        glActiveTexture(GL_TEXTURE0+_texture.cpu_id);
         glBindTexture(GL_TEXTURE_2D, _texture.gpu_id);
         glUniform1i(location, _texture.cpu_id);
-        glActiveTexture(GL_TEXTURE0 + _texture.cpu_id);
+}
+void Shader::set_uniform(const std::vector<Light>& _arr, std::string _name) const {
+        for(int i = 0; i < _arr.size(); i++) {
+                set_uniform(_arr[i].dir, std::string(_name + "[") + std::to_string(i) + std::string("].dir"));
+                set_uniform(_arr[i].ia, std::string(_name + "[") + std::to_string(i) + std::string("].ia"));
+                set_uniform(_arr[i].is, std::string(_name + "[") + std::to_string(i) + std::string("].is"));
+                set_uniform(_arr[i].id, std::string(_name + "[") + std::to_string(i) + std::string("].id"));
+        }
+}
+void Shader::set_uniform(const Material& _material, std::string _name) const {
+        set_uniform(_material.d, _name + ".d");
+        set_uniform(_material.ka, _name + ".ka");
+        set_uniform(_material.kd, _name + ".kd");
+        set_uniform(_material.ke, _name + ".ke");
+        set_uniform(_material.ks, _name + ".ks");
+        set_uniform(_material.ni, _name + ".ni");
+        set_uniform(_material.ns, _name + ".ns");
 }
 
 void Shader::bind(RenderState _state) const {
         mat4 mvp = _state.p * _state.v * _state.m;
         set_uniform(mvp, "mvp");
-        //set_uniform(_state.m, "m");
+        set_uniform(_state.m, "m");
+        set_uniform(_state.m_inv, "m_inv");
+        set_uniform(_state.cam_pos, "cam_pos");
+        set_uniform(*_state.lights, "lights");
+        set_uniform((int)_state.lights->size(), "n_lights");
         set_uniform(*_state.texture, "sampler");
+
+        set_uniform(*_state.material, "material");
 }

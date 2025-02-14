@@ -10,8 +10,8 @@ const float g_fov = 90.0f;
 const float g_fp = 0.1f; 
 const float g_bp = 100.0f; // render dist
 const float g_camera_speed = 5.0f;
-const u_int g_window_w = 600;
-const u_int g_window_h = 600;
+const u_int g_window_w = 1200;
+const u_int g_window_h = 800;
 
 Scene scene;
 void key_callback_wrapper(GLFWwindow * _window, int _key, int _scancode, int _action, int _mods) {
@@ -25,10 +25,10 @@ void cursor_pos_callback_wrapper(GLFWwindow * _window, double _xpos, double _ypo
 
 void init(GLFWwindow * _window) {
         glewInit();
-        glViewport(0, 0, g_window_w, g_window_h);
+        glViewport(0, 0, g_window_w * 1.5, g_window_h * 1.5);
         glEnable(GL_DEPTH_TEST);
 	glDisable(GL_CULL_FACE);
-        glfwSwapInterval(0);
+        glfwSwapInterval(1);
         glLineWidth(10);
         glfwSetKeyCallback(_window, key_callback_wrapper);
         glfwSetCursorPosCallback(_window, cursor_pos_callback_wrapper);
@@ -70,7 +70,7 @@ int main() {
         }
 
 
-        window = glfwCreateWindow(g_window_h, g_window_w, "Client", NULL, NULL);
+        window = glfwCreateWindow(g_window_w, g_window_h, "Client", NULL, NULL);
 
         if(!window) {
                 glfwTerminate();
